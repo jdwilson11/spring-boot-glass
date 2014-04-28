@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <body>
+    	<p>Welcome to the Java Mirror API Test!</p>
+    	<p>Insert a message to send to your Glass timeline:</p>
+    	<form action="#" th:action="@{/}" method="post" th:object="${message}" >
+    		<input type="text" name="Message" value="Hello Glass!" th:field="*{text}" />
+    		<button type="submit">Submit</button>
+    	</form>
+    	<p th:text="${resultText}">Result text</p>
+    </body>
+</html>
